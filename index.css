@@ -1,0 +1,101 @@
+*{
+    /* padding: 0px;
+    margin: 0px; */
+    box-sizing: border-box;
+}
+
+@font-face {
+    font-family: h1_font; /* bungee_shade */
+    src: url(fonts/Bungee_Shade/BungeeShade-Regular.ttf);
+}
+
+@font-face {
+    font-family: h2_font; /* bungee_outline */
+    src: url(fonts/Bungee_Outline/BungeeOutline-Regular.ttf);
+}
+
+@font-face {
+    font-family: nav_child_2_font; /* barlow_condensed */
+    src: url(fonts/Barlow_Condensed/BarlowCondensed-Bold.ttf);
+}
+
+@font-face {
+    font-family: h4_font; /* barlow_semi_condensed */
+    src: url(fonts/Barlow_Semi_Condensed/BarlowSemiCondensed-Light.ttf);
+}
+
+html{
+    height: 100%;
+}
+
+body{
+    height: 100%;
+    background-image: url(images/hendrix_background.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    font-family: h4_font;
+}
+
+section{
+    background-color: rgba(1, 1, 1, 0.3);
+    border-radius: 10px;
+    border: 2px solid white;
+    margin: 10px; /* Ska vara samma som i nav */
+    color: white;
+}
+
+section:nth-of-type(1){
+    display: grid;
+    grid-template-columns: ;
+}
+
+section > *{
+    margin: 10px;
+}
+
+
+nav{
+    display: flex;
+    gap: 10px;
+    margin: 10px; /* Ska vara samma som i section */
+}
+
+nav > a{
+    flex-basis: 0;
+    flex-grow: 1;
+    
+    padding: 10px;
+    border-radius: 10px;
+    background-color: rgba(255, 255, 255, 0.7);
+
+    text-decoration: none;
+    text-align: center;
+    color: black;
+}
+
+a:nth-child(2)
+{
+    font-weight: bold;
+    font-family: nav_child_2_font;
+    border: 1px solid white;
+    box-shadow: 1px 1px 20px white;
+    
+}
+
+main{
+    background-color: rgba(1, 1, 1, 0.3);
+    margin: 50px;
+    padding: 10px;
+    border-radius: 10px;
+}
+
+h1{
+    margin: 0px;
+    font-family: h1_font;
+    color: rgba(255, 255, 255, 0.7);
+    font-size: 60px;
+}
+
+h2{
+    font-family: h2_font;
+}
