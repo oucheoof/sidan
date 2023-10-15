@@ -5,23 +5,33 @@
 }
 
 @font-face {
-    font-family: h1_font; /* bungee_shade */
+    font-family: h1_font;
     src: url(fonts/Bungee_Shade/BungeeShade-Regular.ttf);
 }
 
 @font-face {
-    font-family: h2_font; /* bungee_outline */
+    font-family: h2_font; 
     src: url(fonts/Bungee_Outline/BungeeOutline-Regular.ttf);
 }
 
 @font-face {
-    font-family: nav_child_2_font; /* barlow_condensed */
+    font-family: nav_child_2_font; 
     src: url(fonts/Barlow_Condensed/BarlowCondensed-Bold.ttf);
 }
 
 @font-face {
-    font-family: h4_font; /* barlow_semi_condensed */
+    font-family: p_font; 
     src: url(fonts/Barlow_Semi_Condensed/BarlowSemiCondensed-Light.ttf);
+}
+
+@font-face {
+    font-family: list_font; 
+    src: url(fonts/Barlow_Condensed/BarlowCondensed-Thin.ttf);
+}
+
+@font-face {
+    font-family: h4_font; 
+    src: url(fonts/Barlow_Condensed/BarlowCondensed-Bold.ttf);
 }
 
 html{
@@ -33,16 +43,18 @@ body{
     background-image: url(images/hendrix_background.jpg);
     background-size: cover;
     background-repeat: no-repeat;
-    font-family: h4_font;
+    font-family: p_font;
 }
 
 img{
     border-radius: 10px;
     height: 400px;
     width: 400px;
+    margin-bottom: 2%;
 }
 
 section{
+    display: grid;
     background-color: rgba(1, 1, 1, 0.3);
     border-radius: 10px;
     border: 2px solid white;
@@ -52,13 +64,15 @@ section{
 
 section:nth-of-type(1){
     display: grid;
-    grid-template-rows: 1fr 1fr;
-    grid-template-columns: 1fr 1fr auto;
+    grid-template-rows: 1fr 0.2fr;
+    /* grid-template-columns: auto 1fr auto; */
+    grid-template-columns: auto auto auto auto;
 }
 
-.under_album{
-    grid-column: 3;
-}
+/* .under_album ol{
+    display: flex;
+    flex-direction: column;
+} */
 
 section > *{
     /* margin: 10px; */
@@ -111,8 +125,36 @@ h2{
     font-family: h2_font;
 }
 
-.under_ablum_1{
+.album_container{
+    grid-row: 1;
+    grid-column: 4;
+}
+
+.under_album{
+    display: flex;
+    justify-content: space-around;
+    border-radius: 0px 0px 0px 10px;
     font-weight:bolder;
-    background-color: #dfc300;
     color: #881f5a;
+    gap: 3%;
+}
+
+.under_album > :first-child{
+    border-radius: 0px 0px 0px 10px;
+    flex-basis: 49%;
+    background-color: #dfc300;
+    font-family: list_font;
+}
+
+.under_album > :last-child{
+    border-radius: 0px 0px 10px 0px;
+    flex-basis: 49%;
+    background-color: #dfc300;
+}
+h4{
+    font-family: h4_font;
+}
+.bottom{
+    grid-column-start: 2;
+    grid-column-end: 4;
 }
