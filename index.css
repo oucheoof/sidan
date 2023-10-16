@@ -1,6 +1,4 @@
 *{
-    /* padding: 0px;
-    margin: 0px; */
     box-sizing: border-box;
 }
 
@@ -45,16 +43,10 @@ body{
     background-repeat: no-repeat;
     font-family: p_font;
 }
-
-img{
-    border-radius: 10px;
-    height: 400px;
-    width: 400px;
-    margin-bottom: 2%;
-}
-
 section{
     display: grid;
+    grid-template-columns: auto 1fr;
+    grid-template-rows: auto;
     background-color: rgba(1, 1, 1, 0.3);
     border-radius: 10px;
     border: 2px solid white;
@@ -64,15 +56,7 @@ section{
 
 section:nth-of-type(1){
     display: grid;
-    grid-template-rows: 1fr 0.2fr;
-    /* grid-template-columns: auto 1fr auto; */
-    grid-template-columns: auto auto auto auto;
 }
-
-/* .under_album ol{
-    display: flex;
-    flex-direction: column;
-} */
 
 section > *{
     /* margin: 10px; */
@@ -114,6 +98,18 @@ main{
     border-radius: 10px;
 }
 
+.album_container > img{
+    border-radius: 10px;
+    height: 400px;
+    width: 400px;
+    margin-bottom: 2%;
+}
+
+.bottom > img{
+    height: 150px;
+    width: 100px;
+}
+
 h1{
     margin: 0px;
     font-family: h1_font;
@@ -125,9 +121,12 @@ h2{
     font-family: h2_font;
 }
 
+h4{
+    font-family: h4_font;
+}
+
 .album_container{
-    grid-row: 1;
-    grid-column: 4;
+    display: grid;
 }
 
 .under_album{
@@ -151,10 +150,40 @@ h2{
     flex-basis: 49%;
     background-color: #dfc300;
 }
-h4{
-    font-family: h4_font;
-}
 .bottom{
-    grid-column-start: 2;
-    grid-column-end: 4;
+    display: grid;
+    grid-template-columns: repeat(8, 1fr);
+    grid-template-rows: 1fr;
+    grid-column: 1 / span 2;
+    gap: 0.3%;
+}
+.bottom > p{
+    padding: 20px 20px;
+    margin: 0px;
+    background-color: #881f5a;
+    color: #dfc300;
+}
+
+.bottom > p:nth-child(1){
+    border-radius: 10px 0px 10px 10px;
+}
+
+.bottom > p:nth-child(2){
+    border-radius: 10px 10px 10px 0px;
+    grid-column:  5 / 7;
+}
+
+.bottom > p:nth-child(3){
+    width: 100%;
+    height: 100%;
+    background-size: cover;
+    background-position: center;
+    background-image: url(images/chas_chandler.jpg);
+    color: white;
+    grid-column: 7;
+    border-radius: 0px 10px 10px 10px;
+}
+
+.bottom > p:nth-child(4){
+    border-radius: 10px 10px 0px 10px;
 }
