@@ -105,6 +105,10 @@ main{
     margin-bottom: 2%;
 }
 
+.album_container > img:hover { /* Fix hover */
+     opacity: 0;
+}
+
 .bottom > img{
     height: 150px;
     width: 100px;
