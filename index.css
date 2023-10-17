@@ -32,14 +32,11 @@
     src: url(fonts/Barlow_Condensed/BarlowCondensed-Bold.ttf);
 }
 
-html{
-    /* height: 100%; */
-}
-
 body{
-    /* height: 100%; */
     background-image: url(images/hendrix_background.jpg);
     background-size: cover;
+    background-attachment: fixed; 
+
     background-repeat: no-repeat;
     font-family: p_font;
 }
@@ -103,11 +100,19 @@ main{
     height: 400px;
     width: 400px;
     margin-bottom: 2%;
+    transition: opacity 1s;
 }
 
-.album_container > img:hover { /* Fix hover */
-     opacity: 0;
+.album_container > img:nth-child(1):hover {
+    
+    opacity: 0;
 }
+
+div > img:nth-child(1){
+    position: absolute;
+
+}
+
 
 .bottom > img{
     height: 150px;
