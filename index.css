@@ -392,6 +392,12 @@ p{
     .bottom > p{
         font-size: 2vw;
     }
+
+    body{
+        background-image: url(images/hendrix_mobile_cover.jpg);
+        background-position: center;
+        background-size: cover;
+    }
 }
 
 @media (max-width: 800px) and (max-width: 900px){ /* Desktop */
@@ -419,7 +425,7 @@ p{
     }
 }
 
-@media (max-width: 900px) and (max-width: 1200px){ /* Ökar med bredden vw */
+@media (min-width: 900px) and (max-width: 1200px){ /* Ökar med bredden vw */
     nav > a{
         font-size: 1.2vw;
     }
@@ -444,27 +450,36 @@ p{
     }
 }
 
-@media (max-width: 1200px){ /* Sluta innehåll slutar växa */
+@media (min-width: 1200px){ /* Sluta innehåll slutar växa */
     nav > a{
-        font-size: 9.6px;
+        font-size: 14px;
     }
 
     h1{
-        font-size: 48px;
+        font-size: 72px;
     }
 
     h2{
-        font-size: 20px;
+        font-size: 30px;
     }
     h3{
-        font-size: 16px;
+        font-size: 24px;
     }
 
     p{
-        font-size: 9.6px;
+        font-size: 14.4px;
     }
 
     .bottom > p{
-        font-size: 8px;
+        font-size: 12px;
     }
+
+    body{
+        display: flex;
+        justify-content: center;
+    }
+
+    body > * {
+        max-width: 1169.6px;
+     }
 }
